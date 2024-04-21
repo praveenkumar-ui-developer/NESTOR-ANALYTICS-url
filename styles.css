@@ -1,0 +1,46 @@
+/* Basic styles for the tab container */
+#tabs-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for individual tabs */
+.tab-container {
+    padding: 8px;
+    cursor: pointer;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tab-container.active {
+    background-color: #fff;
+}
+
+/* Styles for the close button */
+.close-btn {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+/* Styles for the tab content */
+#tab-content {
+    margin-top: 10px;
+}
+
+#content-iframe {
+    width: 100%;
+    height: calc(100vh - 50px); /* Adjust height based on your needs */
+    border: 1px solid #ccc;
+}
+
+/* Styles for the search bar */
+.search-bar {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 200px; /* Adjust width as needed */
+}
