@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    // Initialize an empty array to store tab URLs and search queries
+    
     const tabs = [];
 
     // Function to render tabs
