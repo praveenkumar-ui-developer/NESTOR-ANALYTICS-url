@@ -5,4 +5,5 @@ This web browser application allows users to search for information using URLs. 
 
 #Link 
 https://browser-wikipedia.netlify.app/
+
 In this application, users have the capability to search for any topic, and the retrieved data will be sourced from Wikipedia.
