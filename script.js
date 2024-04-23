@@ -1,5 +1,5 @@
 $(document).ready(() => {
-    
+    // Initialize an empty array to store tab URLs and search queries
     const tabs = [];
 
     // Function to render tabs
@@ -15,7 +15,15 @@ $(document).ready(() => {
                 if (e.keyCode === 13) {
                     const index = $('.tab-container').index($tabContainer);
                     tabs[index].query = $(this).val();
-                    searchWikipedia($(this).val());
+                    const url = $(this).val();
+                    if (url.includes("http")) {
+                       loadUrl(url)
+                    } else {
+                        searchWikipedia($(this).val());
+                    }
+                    
+
+                   
                 }
             });
             const isActiveTab = index === tabs.length - 1;
@@ -39,7 +47,13 @@ $(document).ready(() => {
         const index = $('.tab-container').index($tabContainer);
         $('#tab-content').show();
         const query = tabs[index].query;
-        searchWikipedia(query);
+       
+        if (query.includes("http")) {
+           loadUrl(query)
+        } else {
+            searchWikipedia(query);
+        }
+      
         $('.search-bar').hide();
         $tabContainer.find('.search-bar').show();
     }
@@ -55,7 +69,8 @@ $(document).ready(() => {
             switchTab($('.tab-container').eq(index - 1));
         } else {
             $('#content-iframe').attr('src', ''); // No tabs left, clear iframe content
-            $('#tab-content').hide();
+            // $('#tab-content').hide();
+            loadUrl('https://city-weather-webapplication.netlify.app');
         }
     }
 
@@ -96,4 +111,3 @@ $(document).ready(() => {
     // Initial rendering
     renderTabs();
 });
-
