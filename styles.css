@@ -32,7 +32,7 @@
 
 #content-iframe {
     width: 100%;
-    height: calc(100vh - 50px); /* Adjust height based on your needs */
+    height: calc(100vh - 50px); 
     border: 1px solid #ccc;
 }
 
@@ -42,5 +42,5 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-left: 10px;
-    width: 200px; /* Adjust width as needed */
+    width: 200px;
 }
